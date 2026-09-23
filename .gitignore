@@ -1,0 +1,15 @@
+# macOS clutter
+.DS_Store
+._*
+
+# Design reference files (not part of the site)
+hero-kit/
+hero-kit.zip
+reference/
+
+# Editor / tool folders
+.claude/
+.vscode/
+.idea/
+*.swp
+*~
