@@ -449,7 +449,9 @@
     }
     .js .project.reveal.is-visible:hover, .project:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
     .project-media { position: relative; overflow: hidden; border-radius: 16px; }
-    .project-media img { width: 100%; aspect-ratio: 16 / 11; object-fit: cover; background: #f3ece0; transition: transform .8s var(--ease-out); }
+    .project-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #f3ece0; transition: transform .8s var(--ease-out); }
+    .project-media img.fit-contain { object-fit: contain; background: #0b0b0b; }
+    .project-meta { color: var(--label); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
     .project:hover .project-media img { transform: scale(1.06); }
     .project-link {
       position: absolute; top: 12px; right: 12px;
@@ -830,8 +832,8 @@
     <!-- ============================================================
          5. PROJECTS
          Each <article class="project"> is one card. Cover images go in
-         images/projects/ (landscape, about 16:11). Replace href="#"
-         with the project's real link.
+         images/projects/ (16:9 slides work best). The round button links
+         to the deck; add class="fit-contain" to show a non-16:9 image whole.
          ============================================================ -->
     <section class="section" id="projects">
       <div class="container">
@@ -840,85 +842,91 @@
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-1.jpg" width="880" height="605" alt="Cover image for Google Agentic Enterprise" loading="lazy" decoding="async">
-              <a class="project-link" href="https://docs.google.com/presentation/d/1Svw0EpVcFZTkAsjiHcZZ6crvD5Yym5auM0J-NHlN7p0/edit?usp=sharing&amp;resourcekey=0-0Q2YF_4OfbZsXd_LtJOvSA" target="_blank" rel="noopener" aria-label="Open project: Google Agentic Enterprise (Google Slides)">
+              <img src="images/projects/project-1.jpg" width="1600" height="894" alt="Title slide: Navigating the Agentic Enterprise, Google Cloud internship presentation" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1azOaTZVMEbL96x8oh3Br-e-KlgwxN38Y/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Navigating the Agentic Enterprise">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Google Agentic Enterprise</h3>
-              <p>Documented the AI tools I built for internal Cloud marketing teams in a lightning presentation.</p>
-              <ul class="tags"><li>#AI tools</li><li>#product marketing</li><li>#enablement</li></ul>
+              <p class="project-meta">Google Cloud · Internship</p>
+              <h3>Navigating the Agentic Enterprise</h3>
+              <p>Built 7 Gemini Enterprise AI workflows for partner marketers, then launched a partner podcast series with 7.8M network reach.</p>
+              <ul class="tags"><li>#AI agents</li><li>#product marketing</li><li>#automation</li></ul>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-2.png" width="1422" height="1202" alt="Uber app screens showing a Family profile invite and Simple Mode" loading="lazy" decoding="async">
-              <a class="project-link" href="#" target="_blank" rel="noopener" aria-label="Open project: Uber for Senior Riders">
+              <img src="images/projects/project-2.jpg" width="1405" height="778" alt="Title slide: Guiding Sustainable Supply Decisions, Apple case competition team" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1WRWAaG-fSNvSLa_S1ncsrN7wO_IiWgMq/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Guiding Sustainable Supply Decisions">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Uber for Senior Riders</h3>
-              <p>Shaped a strategy to grow adoption among 65+ Uber users.</p>
-              <ul class="tags"><li>#strategy</li><li>#growth</li><li>#user research</li></ul>
+              <p class="project-meta">Apple · Case Competition</p>
+              <h3>Guiding Sustainable Supply Decisions</h3>
+              <p>A tiered Apple Watch Series 8 lineup pairing recycled aluminum with cycle tracking, projecting $53M in new revenue while advancing 2030 carbon goals.</p>
+              <ul class="tags"><li>#operations</li><li>#sustainability</li><li>#pricing</li></ul>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-3.png" width="1422" height="1042" alt="Adobe and Business Tech Group: Photoshop shown on a laptop and a phone" loading="lazy" decoding="async">
-              <a class="project-link" href="#" target="_blank" rel="noopener" aria-label="Open project: Adobe GTM Strategy">
+              <img class="fit-contain" src="images/projects/project-3.jpg" width="1422" height="1202" alt="Uber app screens showing a Family profile invite and Simple Mode" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1-B7ZnC9lA4mJ_Yqw6NVi1YaDrVX9cOOd/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Unlocking Senior Rider Growth">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Adobe GTM Strategy</h3>
-              <p>Launch plan for Photoshop Mobile &amp; Web, targeting college students.</p>
-              <ul class="tags"><li>#go to market</li><li>#launch</li><li>#strategy</li></ul>
+              <p class="project-meta">Uber · Internship</p>
+              <h3>Unlocking Senior Rider Growth</h3>
+              <p>Pinpointed why 65+ riders drop off (onboarding and cancellations) and built a prioritized roadmap toward $1.32B in senior bookings by 2028.</p>
+              <ul class="tags"><li>#product strategy</li><li>#roadmapping</li><li>#SQL</li></ul>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-4.jpg" width="880" height="605" alt="Cover image for Microsoft Learn" loading="lazy" decoding="async">
-              <a class="project-link" href="#" target="_blank" rel="noopener" aria-label="Open project: Microsoft Learn">
+              <img src="images/projects/project-4.jpg" width="1600" height="888" alt="Title slide: Adobe and Business Tech Group final presentation" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1rKgnaEt5sJj8WdIu9cewFFGNiX02lN1j/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Photoshop Mobile for Students">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Microsoft Learn</h3>
-              <p>Developed an innovative solution to address gender imbalance.</p>
-              <ul class="tags"><li>#product</li><li>#innovation</li><li>#design thinking</li></ul>
+              <p class="project-meta">Adobe · Consulting</p>
+              <h3>Photoshop Mobile for Students</h3>
+              <p>Interviewed 49 students to segment users by skill, then built a launch plan for beginners: a design competition, .edu free trial, and creator partnerships.</p>
+              <ul class="tags"><li>#go to market</li><li>#user research</li><li>#segmentation</li></ul>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-5.jpg" width="880" height="605" alt="Cover image for Tidepool" loading="lazy" decoding="async">
-              <a class="project-link" href="#" target="_blank" rel="noopener" aria-label="Open project: Tidepool">
+              <img src="images/projects/project-5.jpg" width="1600" height="896" alt="Title slide: Strategies to Boost Female Engagement in Microsoft's Student Ambassador Program" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1mcOo6UjggZbQ6dyN765iY1aQGa4b03Db/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Women in Microsoft Learn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Tidepool</h3>
-              <p>A go-to-market plan for a beach cleanup volunteering app, from positioning to launch metrics.</p>
-              <ul class="tags"><li>#product</li><li>#go to market</li><li>#strategy</li></ul>
+              <p class="project-meta">Microsoft · Consulting</p>
+              <h3>Women in Microsoft Learn</h3>
+              <p>Mapped the Student Ambassador sign-up journey, flagged 3 key roadblocks, and proposed a cohort system to grow female participation.</p>
+              <ul class="tags"><li>#design thinking</li><li>#UX research</li><li>#DEI</li></ul>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-6.jpg" width="880" height="605" alt="Cover image for Open Studio" loading="lazy" decoding="async">
-              <a class="project-link" href="#" target="_blank" rel="noopener" aria-label="Open project: Open Studio">
+              <img src="images/projects/project-6.jpg" width="1600" height="894" alt="Title slide: Crypto.com Arena and Business Tech Group final deliverable" loading="lazy" decoding="async">
+              <a class="project-link" href="https://drive.google.com/file/d/1PIJbPZJRhdNIrOyTIf5MZ29wcGfmJDPK/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Crypto.com Arena VIP Tour">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
             </div>
             <div class="project-body">
-              <h3>Open Studio</h3>
-              <p>An accessible booking flow for local art classes, tested with screen reader users.</p>
-              <ul class="tags"><li>#product</li><li>#accessibility</li><li>#figma</li></ul>
+              <p class="project-meta">Crypto.com · Project Lead</p>
+              <h3>Crypto.com Arena VIP Tour</h3>
+              <p>Led a 4-person team to tackle low tour awareness (86% unaware) with athlete-driven social, referral vouchers, and themed tour days.</p>
+              <ul class="tags"><li>#project management</li><li>#marketing</li><li>#customer experience</li></ul>
             </div>
           </article>
 

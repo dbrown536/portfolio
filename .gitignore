@@ -13,3 +13,6 @@ reference/
 .idea/
 *.swp
 *~
+
+# Full-size originals of project covers (the site uses the .jpg copies)
+images/projects/*.png
