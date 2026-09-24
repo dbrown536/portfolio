@@ -315,6 +315,10 @@
     .about-title { font-size: clamp(3rem, 6vw, 5.25rem); line-height: 1; letter-spacing: -0.03em; margin-bottom: 36px; }
     .about-title em { color: var(--ink); background: linear-gradient(transparent 60%, var(--butter) 60%, var(--butter) 92%, transparent 92%); padding: 0 .08em; }
     .about-body { display: flex; flex-direction: column; gap: 22px; font-size: 1.25rem; line-height: 1.7; }
+    .about-body strong { color: var(--ink); font-weight: 600; }
+    .about-actions { margin-top: 36px; }
+    .about-resume { gap: 10px; }
+    .about-resume svg { width: 20px; height: 20px; }
 
     .about-photo { grid-area: photo; position: relative; isolation: isolate; }
     .headshot {
@@ -636,11 +640,18 @@
           <div class="about-text reveal">
             <h2 class="about-title">About <em>Me</em></h2>
             <div class="about-body">
-              <p>👋 Welcome to my Portfolio. I'm Danielle Brown, a Product Manager from Los Angeles</p>
-              <p>🎓 I'm a Business Administration student at USC and currently studying abroad at HEC Paris. I'm actively seeking opportunities in Product for New Grad</p>
-              <p>💻 This past summer, I was an Associate Product Marketing Manager Intern at Google where I supported partner campaigns and developed internal AI tools for the Cloud team.</p>
-              <p>🌞 In my free time, you can find me taking dance classes 💃, trying new cafes 🍵, reading a good fiction book 📖, or going for a workout 🏃‍♀️</p>
-              <p>Feel free to connect with my socials on the right!</p>
+              <p>👋 Hi, I'm <strong>Danielle</strong>! Welcome to my portfolio.</p>
+              <p>🎓 I'm studying <strong>Business Administration at USC Marshall</strong>, graduating in <strong>Fall 2026</strong>, and I'm currently on exchange at <strong>HEC Paris</strong> 🇫🇷. I'm looking for <strong>new-grad roles in product and strategy</strong>.</p>
+              <p>💻 This past summer, I was an <strong>Associate Product Marketing Manager Intern at Google</strong>, where I supported partner campaigns for <strong>Google Cloud</strong> and built <strong>internal AI tools</strong> for the team.</p>
+              <p>🌞 Outside of work, you'll find me in a dance class 💃, trying a new café 🍵, getting lost in a good fiction book 📖, or squeezing in a workout 🏃‍♀️.</p>
+              <p>Let's connect! My socials are on the right.</p>
+            </div>
+            <div class="about-actions" hidden>
+              <!-- TODO: replace RESUME_LINK with the real résumé URL, then remove "hidden" above -->
+              <a class="btn btn-primary about-resume" href="RESUME_LINK" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                Download my résumé
+              </a>
             </div>
           </div>
 
@@ -872,7 +883,7 @@
 
           <article class="project reveal">
             <div class="project-media">
-              <img class="fit-contain" src="images/projects/project-3.jpg" width="1422" height="1202" alt="Uber app screens showing a Family profile invite and Simple Mode" loading="lazy" decoding="async">
+              <img src="images/projects/project-3.jpg" width="1595" height="895" alt="Title slide: Senior Riders: Unlocking Growth, Uber, August 2025" loading="lazy" decoding="async">
               <a class="project-link" href="https://drive.google.com/file/d/1-B7ZnC9lA4mJ_Yqw6NVi1YaDrVX9cOOd/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Unlocking Senior Rider Growth">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
@@ -887,7 +898,7 @@
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="images/projects/project-4.jpg" width="1600" height="888" alt="Title slide: Adobe and Business Tech Group final presentation" loading="lazy" decoding="async">
+              <img class="fit-contain" src="images/projects/project-4.jpg" width="1422" height="1042" alt="Adobe x Business Tech Group: Photoshop layers shown on a laptop and phone" loading="lazy" decoding="async">
               <a class="project-link" href="https://drive.google.com/file/d/1rKgnaEt5sJj8WdIu9cewFFGNiX02lN1j/view?usp=sharing" target="_blank" rel="noopener" aria-label="Open deck: Photoshop Mobile for Students">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </a>
